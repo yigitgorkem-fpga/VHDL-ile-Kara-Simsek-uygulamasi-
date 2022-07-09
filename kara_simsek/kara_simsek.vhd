@@ -1,5 +1,5 @@
 library ieee;
-use ieee.std_logic_1164.all; -- We added std_logic_1164 package to use std_logic and std_logic_vector
+use ieee.std_logic_1164.all; -- We added std_logic_1164 package to use std_logic,std_logic_vector and rising_edge
 
 entity kara_simsek is -- output value cikti will change its value when clk at rising edge
 generic (length : integer :=8); --uzunluk will corresponds to 8
