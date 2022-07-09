@@ -6,7 +6,7 @@ generic (length : integer :=8); --uzunluk will corresponds to 8
 Port (
 
 clk : in std_logic; 
-cikti : out std_logic_vector(length-1 downto 0)
+output : out std_logic_vector(length-1 downto 0)
 
 
  );
@@ -46,11 +46,11 @@ if (rising_edge(clk)) then
         change_of_direction<='0';
       end if;
   
- end if;
+end if;
  
 end if;
 end process;
 
-cikti<=current_state;
+output<=current_state;
 
 end Behavioral;
