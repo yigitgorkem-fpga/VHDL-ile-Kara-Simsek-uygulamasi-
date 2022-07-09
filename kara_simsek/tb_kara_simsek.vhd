@@ -12,13 +12,13 @@ component kara_simsek is -- We represent design source to simulation source
 Port (
 
 clk : in std_logic;
-cikti : out std_logic_vector(length-1 downto 0)
+output : out std_logic_vector(length-1 downto 0)
 
  );
 end component;
 
 signal clk :  std_logic;  -- We created signals same name with input and output
-signal cikti :  std_logic_vector(length-1 downto 0);
+signal output :  std_logic_vector(length-1 downto 0);
 
 constant clock_period : time:=10ns; -- clock will complete one period in 10ns
 
@@ -39,7 +39,7 @@ end process;
 uut: kara_simsek port map(
 
  clk      => clk   ,        
- cikti    => cikti 
+ output   => output 
 
 );
 
